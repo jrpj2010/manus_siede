@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+  <style>
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background: #F8F9FA;
+      font-family: 'Hiragino Kaku Gothic Pro', 'Noto Sans JP', sans-serif;
+    }
+
+    .title {
+      color: #2D3E50;
+      font-size: 36px;
+      font-weight: bold;
+      border-bottom: 3px solid #3498DB;
+      padding-bottom: 8px;
+      margin-bottom: 24px;
+    }
+
+    .content {
+      color: #333333;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #E74C3C;
+      font-weight: 600;
+    }
+
+    .timeline-item {
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      transform: translateX(10px);
+    }
+
+    .year-circle {
+      background: #3498DB;
+      color: white;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .chess-icon {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide-container p-16">
+    <h1 class="title">歴史的転換点：1997年から2025年まで</h1>
+    
+    <div class="grid grid-cols-2 gap-8">
+      <div class="content">
+        <div class="timeline-item mb-8 flex items-center">
+          <div class="year-circle mr-6">1997</div>
+          <div>
+            <h3 class="text-2xl font-bold mb-2">ディープブルーの衝撃</h3>
+            <p>IBMのAIがチェス世界チャンピオンに勝利。<span class="highlight">人間が機械に負けた歴史的瞬間</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item mb-8 flex items-center">
+          <div class="year-circle mr-6">2022</div>
+          <div>
+            <h3 class="text-2xl font-bold mb-2">ChatGPT登場</h3>
+            <p>OpenAIが公開し、<span class="highlight">わずか2ヶ月で1億ユーザー突破</span></p>
+          </div>
+        </div>
+
+        <div class="timeline-item flex items-center">
+          <div class="year-circle mr-6">2025</div>
+          <div>
+            <h3 class="text-2xl font-bold mb-2">AI戦争時代</h3>
+            <p><span class="highlight">毎週のように勢力図が変わる</span>激烈な開発競争</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex justify-center items-center">
+        <div style="position: relative;">
+          <i class="fas fa-chess-king text-9xl text-gray-800 chess-icon"></i>
+          <div class="absolute -top-4 -right-4">
+            <div class="bg-red-500 text-white rounded-full w-20 h-20 flex items-center justify-center font-bold text-lg">
+              AI WIN
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 bg-blue-50 p-6 rounded-lg">
+      <p class="text-2xl text-center font-bold text-blue-800">
+        28年間で、AIは「特殊な技術」から「日常の必需品」へ
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+  <style>
+    .slide-container {
+      width: 1280px;
+      min-height: 720px;
+      background: linear-gradient(135deg, #1E3A8A 0%, #312E81 50%, #7C2D12 100%);
+      font-family: 'Hiragino Kaku Gothic Pro', 'Noto Sans JP', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .title {
+      color: #ffffff;
+      font-size: 72px;
+      font-weight: bold;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      letter-spacing: 0.05em;
+    }
+
+    .subtitle {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: 300;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      letter-spacing: 0.02em;
+    }
+
+    .date {
+      color: #ffffff;
+      font-size: 24px;
+      opacity: 0.9;
+    }
+
+    .ai-particle {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: float 20s infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.3;
+      }
+      90% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-100vh) translateX(50px);
+        opacity: 0;
+      }
+    }
+
+    .glow-text {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3498DB, 0 0 40px #3498DB;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #3498DB, 0 0 40px #3498DB, 0 0 50px #3498DB;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slide-container flex flex-col justify-center items-center text-center relative">
+    <!-- AI particles background -->
+    <div class="ai-particle" style="width: 100px; height: 100px; left: 10%; animation-delay: 0s;"></div>
+    <div class="ai-particle" style="width: 60px; height: 60px; left: 30%; animation-delay: 3s;"></div>
+    <div class="ai-particle" style="width: 80px; height: 80px; left: 50%; animation-delay: 6s;"></div>
+    <div class="ai-particle" style="width: 120px; height: 120px; left: 70%; animation-delay: 9s;"></div>
+    <div class="ai-particle" style="width: 40px; height: 40px; left: 90%; animation-delay: 12s;"></div>
+    
+    <div class="z-10">
+      <div class="mb-8">
+        <i class="fas fa-brain text-8xl text-white opacity-80 mb-6 glow-text"></i>
+      </div>
+      
+      <h1 class="title mb-6">緊急取材!</h1>
+      <h2 class="subtitle mb-2">AIで激変する世界と日本</h2>
+      <p class="text-2xl text-white opacity-80 mb-12">〜歴史の転換点に立つ私たち〜</p>
+      
+      <div class="date mt-16">
+        <p class="opacity-90">2025年</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
